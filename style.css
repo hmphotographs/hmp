@@ -64,7 +64,7 @@ header{
     position:fixed;
     top:0;
     background:linear-gradient(#ffffff,#ffffff);    
-    z-index: 100;
+    z-index: 1000;
     padding-left: ;
     background-image: url('header.jpg');
     background-repeat: no-repeat;
@@ -330,6 +330,85 @@ img{
 }
 
 /* Header End*/
+
+
+/* loading  ______________________.  */
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ease-in-out;
+    z-index: 9999;
+    flex-direction:column;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 400;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* লোডিং স্ক্রিন ধীরে ধীরে মিলিয়ে যাবে */
+.fade-out {
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+
+.h68 {
+    color: white;
+    font-size: 14px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+    font-family: font9;
+}
+
+/* ফেড ইন অ্যানিমেশন */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+#logo-stroke {
+    animation: draw 2.5s ease-out forwards;
+}
+
+       svg {
+            width: 150px;
+            height: 150px;
+            stroke: url(#gradient);
+            stroke-width: 5;
+            fill: transparent;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 10s ease-in-out forwards, glow 1.5s infinite alternate;
+            
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes glow {
+            0% { filter: drop-shadow(0 0 5px rgba(255, 150, 0, 0.8)); }
+            100% { filter: drop-shadow(0 0 15px rgba(255, 100, 0, 1)); }
+        }
+
+
+
 
 /* Section 1 */
 
