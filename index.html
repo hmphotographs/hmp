@@ -231,18 +231,17 @@
 
 
     <script>
+	    
     window.onload = function() {
     setTimeout(function() {
-        document.getElementById("loading-screen").classList.add("fade-out"); // লোডিং স্ক্রিন ফেড আউট হবে
-        setTimeout(function() {
-            document.getElementById("loading-screen").style.opacity = "0"; // সম্পূর্ণ লুকিয়ে ফেলবে
-            
-        }, 500); // ১ সেকেন্ড পরে লোডিং স্ক্রিন সম্পূর্ণ লুকিয়ে ফেলবে
-        
-    }, 2000); // ৩ সেকেন্ড পর অ্যানিমেশন শুরু হবে
-    
-  setTimeout(function() {
-            document.getElementById("loading-screen").style.opacity = "0"}, 2000); // ৩.৫ সেকেন্ড পর সম্পূর্ণ লুকিয়ে ফেলবে
+    let loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.style.transition = "opacity 0.5s ease"; // Smooth transition
+    loadingScreen.style.opacity = "0";
+
+    setTimeout(function() {
+        loadingScreen.style.display = "none";
+    }, 500); // 0.5s পর display: none;
+}, 2500); // 2.5s পর ফেইড আউট শুরু হবে
             
             
 };
