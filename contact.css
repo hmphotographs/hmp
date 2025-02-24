@@ -315,21 +315,27 @@ img{
 .sec1{
     height:500px;
     width:100%;
-    background:linear-gradient(#f7f7f7,#f7f7f7);
     display:flex;
-    margin-top:55px;
+    margin-top:40px;
 }
 
 
 .png1{
-    height:340px;
-    width: auto;
-    margin: 0 auto;
-    margin-left:-38px;
-    transition:all 0.3s ease;
+    height:200px;
+    margin: 0 ;
+    padding: 0px;
+    transition: all 1s ease-in-out;
+    background-color: #A9C9FF;
+background-image: linear-gradient(45deg, #A9C9FF 0%, #FFBBEC 100%);
+    border-radius: 41% 59% 52% 48% / 35% 43% 57% 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate( 50%, 50%);
 }
+
+
 .png1:hover{
-    transform: scale(1.05);
+    border-radius: 65% 35% 33% 67% / 52% 59% 41% 48% ;
 }
 
 
@@ -1222,15 +1228,14 @@ h6::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::s
 }
 
 .sec1{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
-.circle-1{
-    transform: scale(0.6);
+.png1{
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 1px;
-    
+    transform: translate(40%, 50%);
+    height: 200px;
 }
 
 
