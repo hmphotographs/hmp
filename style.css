@@ -385,8 +385,8 @@ img{
 }
 
        svg {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             stroke: url(#gradient);
             stroke-width: 5;
             fill: transparent;
