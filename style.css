@@ -1283,6 +1283,14 @@ h6::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::s
 .nev a:hover{
     color: #454545;
 }
+
+
+    /* loadin */
+
+    #loading-screen {
+        background: url("bglog.gif");
+        background-size: 120%;
+    }
     
     
     /* section 1 */
